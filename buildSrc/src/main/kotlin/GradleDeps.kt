@@ -6,7 +6,7 @@ object AppVersion {
 }
 
 object ApplicationId {
-    const val id = "com.oleg.miruki"
+    const val id = "com.zovjoin"
 }
 
 object Android {

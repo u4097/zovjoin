@@ -1,4 +1,4 @@
-package com.oleg.miruki
+package com.zovjoin
 
 import android.content.Intent
 import android.os.Bundle
@@ -14,7 +14,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
 
-    open fun startApp(){
+    private fun startApp(){
         val intent = Intent(applicationContext, MainActivity::class.java)
         startActivity(intent)
     }

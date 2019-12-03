@@ -1,4 +1,4 @@
-package com.oleg.miruki.webview
+package com.zovjoin.zovjoin.webview
 
 import android.app.Activity
 import android.content.Context

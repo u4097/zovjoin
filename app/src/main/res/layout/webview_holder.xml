@@ -7,7 +7,7 @@
     android:scrollbarFadeDuration="0" >
 
 
-    <com.oleg.miruki.webview.NonLeakingWebView
+    <com.zovjoin.zovjoin.webview.NonLeakingWebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

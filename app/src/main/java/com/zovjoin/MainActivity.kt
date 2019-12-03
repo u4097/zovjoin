@@ -1,16 +1,8 @@
-package com.oleg.miruki
-
-//import com.crashlytics.android.Crashlytics
-//import io.fabric.sdk.android.Fabric
-import android.graphics.Bitmap
+package com.zovjoin
 import android.os.Build
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
-import android.webkit.JsResult
-import android.webkit.WebChromeClient
-import android.webkit.WebView
-import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.webview_holder.*
 

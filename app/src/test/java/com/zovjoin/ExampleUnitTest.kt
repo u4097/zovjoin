@@ -1,4 +1,4 @@
-package com.oleg.miruki
+package com.zovjoin.zovjoin
 
 import org.junit.Test
 
