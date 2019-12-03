@@ -1,29 +1,33 @@
 package com.zovjoin
-import android.os.Build
+
 import android.os.Bundle
 import android.view.KeyEvent
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.webview_holder.*
 
 class MainActivity : AppCompatActivity() {
 
-    private var url: String? = null
+    val SITE_URL = "http://t.zovjoin.com/"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        Fabric.with(this, Crashlytics())
 
-        url = "http://t.zovjoin.com/"
+/*
+        webView.webViewClient = object : WebViewClient() {
+            override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
+                view?.loadUrl(request?.url.toString())
+                return false
+            }
 
-        if (Build.VERSION.SDK_INT >= 19) {
-            webView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
-        } else {
-            webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+            override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
+                view?.loadUrl(url)
+                return false
+            }
         }
-
-//        webView.webViewClient = MyWebViewClient()
+*/
         webView.isHorizontalScrollBarEnabled = false
 
         with(webView.settings) {
@@ -42,7 +46,6 @@ class MainActivity : AppCompatActivity() {
             fantasyFontFamily = "fantasy"
             fixedFontFamily = "monospace"
             javaScriptCanOpenWindowsAutomatically = false
-            javaScriptEnabled = true
             lightTouchEnabled = false
             loadWithOverviewMode = false
             loadsImagesAutomatically = true
@@ -54,7 +57,7 @@ class MainActivity : AppCompatActivity() {
             setSupportMultipleWindows(false)
             setSupportZoom(true)
 
-            // включаем поддержку JavaScript
+            javaScriptEnabled = true
             domStorageEnabled = true
             loadWithOverviewMode = true
             useWideViewPort = true
@@ -62,7 +65,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        webView.loadUrl(url)
+        webView.loadUrl(SITE_URL)
+        webView.pauseTimers()
+        webView.resumeTimers()
     }
 
 
