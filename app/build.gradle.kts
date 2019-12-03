@@ -7,7 +7,7 @@ plugins {
     kotlin("android")
     kotlin("android.extensions")
     id("com.github.ben-manes.versions") version "0.20.0" // uses gradle depUp ; show old dependencies in termina
-    id("io.fabric")
+//    id("io.fabric")
 }
 
 
@@ -65,7 +65,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:${Versions.androidx}")
     implementation("androidx.core:core-ktx:${Versions.ktx}")
     implementation("androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}")
-    implementation("com.crashlytics.sdk.android:crashlytics:${Versions.crashlytics}")
+//    implementation("com.crashlytics.sdk.android:crashlytics:${Versions.crashlytics}")
 
     testImplementation("junit:junit:${Versions.junit}")
     androidTestImplementation("androidx.test.ext:junit:${Versions.junitExt}")
