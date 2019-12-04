@@ -2,6 +2,9 @@ package com.zovjoin
 
 import android.os.Bundle
 import android.view.KeyEvent
+import android.webkit.WebResourceRequest
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.webview_holder.*
 
@@ -15,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-/*
         webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
                 view?.loadUrl(request?.url.toString())
@@ -27,7 +29,6 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
         }
-*/
         webView.isHorizontalScrollBarEnabled = false
 
         with(webView.settings) {
